@@ -1,0 +1,117 @@
+/* Header.css */
+
+/* Importation du CSS global */
+@import url('../css/global.css');
+
+/* Styles pour le Header */
+.header {
+    background-color: var(--primary-color); /* Kelp - Couleur principale pour le fond */
+    color: var(--secondary-color); /* Celeste - Couleur secondaire pour le texte */
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif; /* Application de la police DM Sans */
+    margin: 0; /* Supprime les marges externes */
+    width: 100%; /* S'assure que le header occupe toute la largeur */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+/* Styles pour le Titre du Header */
+.header-title {
+    margin: 0;
+    margin-bottom: 10px; /* Ajoute un espace sous le titre */
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color); /* Couleur du texte */
+}
+
+/* Style pour le lien dans le titre */
+.header-link {
+    text-decoration: none;
+    color: inherit; /* Garde la couleur définie dans .header-title */
+    padding: 10px 20px; /* Ajoute du padding pour agrandir l'encadré */
+    border-radius: 15px; /* Ajoute un arrondi aux coins */
+    position: relative; /* Position relative pour les pseudo-éléments */
+    transition: transform 0.5s ease, box-shadow 0.8s ease; /* Transition pour le soulèvement plus longue */
+}
+
+.header-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%, /* Dégradé transparent en haut */
+        rgba(152, 169, 146, 0.2) 40%, /* Léger dégradé au milieu */
+        rgba(152, 169, 146, 0.5) 100% /* Plus opaque en bas */
+    );
+    opacity: 0; /* Rendre le pseudo-élément invisible par défaut */
+    transition: opacity 0.8s ease; /* Transition pour l'opacité */
+    z-index: -1; /* Place le pseudo-élément derrière le lien */
+}
+
+.header-link:hover::before {
+    opacity: 1; /* Rendre le pseudo-élément visible au survol */
+}
+
+.header-link:hover {
+    text-decoration: none; /* Pas de soulignement au survol */
+    transform: translateY(-5px); /* Soulève légèrement le lien */
+    box-shadow: 0 10px 15px -3px rgba(152, 169, 146, 0.5), /* Ombre en bas */
+                0 -10px 15px -3px rgba(152, 169, 146, 0);  /* Ombre progressive vers le haut */
+}
+
+/* Styles pour la Navigation */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+}
+
+/* Styles pour les Liens de Navigation */
+.nav-link {
+    color: var(--tertiary-color); /* Envy - Couleur tertiaire pour les liens */
+    text-decoration: none;
+    font-weight: 500; /* Légèrement plus épais pour les liens */
+    padding: 5px 15px; /* Ajoute du padding pour agrandir l'encadré */
+    border-radius: 10px; /* Ajoute un arrondi aux coins */
+    position: relative; /* Position relative pour les pseudo-éléments */
+    transition: transform 0.5s ease, box-shadow 0.8s ease; /* Transition pour le soulèvement plus longue */
+    margin-top: 5px; /* Ajoute un espace au-dessus des liens pour les baisser */
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%, /* Dégradé transparent en haut */
+        rgba(152, 169, 146, 0.2) 40%, /* Léger dégradé au milieu */
+        rgba(152, 169, 146, 0.5) 100% /* Plus opaque en bas */
+    );
+    opacity: 0; /* Rendre le pseudo-élément invisible par défaut */
+    transition: opacity 0.8s ease; /* Transition pour l'opacité */
+    z-index: -1; /* Place le pseudo-élément derrière le lien */
+}
+
+.nav-link:hover::before {
+    opacity: 1; /* Rendre le pseudo-élément visible au survol */
+}
+
+.nav-link:hover {
+    text-decoration: none; /* Pas de soulignement au survol */
+    transform: translateY(-5px); /* Soulève légèrement le lien */
+    box-shadow: 0 10px 15px -3px rgba(152, 169, 146, 0.5), /* Ombre en bas */
+                0 -10px 15px -3px rgba(152, 169, 146, 0);  /* Ombre progressive vers le haut */
+}

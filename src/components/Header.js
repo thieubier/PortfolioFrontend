@@ -1,14 +1,15 @@
 import React from 'react';
+import '../css/Header.css';
 
 function Header() {
   return (
-    <header>
-      <h1>My Portfolio</h1>
+    <header className="header">
+      <h1 className="header-title">myportfolio</h1>
       <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/projects">Projects</a></li>
-          <li><a href="/skills">Skills</a></li>
+        <ul className="nav-list">
+          <li><a href="/" className="nav-link">home</a></li>
+          <li><a href="/projects" className="nav-link">projects</a></li>
+          <li><a href="/skills" className="nav-link">skills</a></li>
         </ul>
       </nav>
     </header>

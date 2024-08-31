@@ -1,0 +1,29 @@
+/* Home.css */
+
+/* Importation du CSS global */
+@import url('../css/global.css');
+
+/* Styles pour la page d'accueil */
+.home-container {
+    padding: 20px;
+    background-color: var(--background-color); /* Utilisation de la même couleur de fond */
+    color: var(--secondary-color); /* Utilisation de la même couleur de texte */
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center; /* Centrage du texte */
+}
+
+.home-title {
+    font-size: 2rem; /* Taille du texte similaire à celle des titres des projets */
+    color: var(--secondary-color); /* Couleur du texte */
+    font-weight: 700; /* Gras */
+    margin-bottom: 20px;
+}
+
+.home-description {
+    font-size: 1.2rem; /* Taille du texte légèrement plus grande que les descriptions de projet */
+    color: var(--text-secondary-color); /* Couleur du texte secondaire */
+    max-width: 800px;
+    margin: 0 auto; /* Centrer horizontalement */
+}

@@ -1,0 +1,60 @@
+/* ProjectsList.css */
+
+/* Importation du CSS global */
+@import url('../css/global.css');
+
+/* Styles pour la section des projets */
+.projects-container {
+    padding: 20px;
+    background-color: var(--background-color); /* Utilisation de la couleur de fond globale */
+    color: var(--secondary-color); /* Utilisation de la couleur secondaire globale */
+    margin: 0; /* Supprime les marges externes */
+    width: 100%; /* S'assure que la section occupe toute la largeur */
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background-color: var(--primary-color); /* Utilisation de la couleur primaire pour le fond des cartes */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-title {
+    font-size: 1.8rem;
+    color: var(--secondary-color); /* Utilisation de la couleur secondaire pour le titre */
+}
+
+.project-description {
+    font-size: 1rem;
+    color: var(--text-secondary-color); /* Utilisation de la couleur du texte secondaire */
+    margin: 10px 0;
+}
+
+.project-technologies {
+    font-size: 1rem;
+    color: var(--tertiary-color); /* Utilisation de la couleur tertiaire pour les technologies */
+    margin-bottom: 10px;
+}
+
+.project-link a {
+    color: var(--accent-color); /* Utilisation de la couleur d'accent pour les liens */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-link a:hover {
+    text-decoration: underline;
+}

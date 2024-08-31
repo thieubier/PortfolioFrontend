@@ -1,17 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import ProjectList from './components/ProjectList';
+import HomePage from './pages/HomePage';
+import ProjectsPage from './pages/ProjectsPage';
+import SkillsPage from './pages/SkillsPage'; // Import du nouveau composant SkillsPage
+import './css/Home.css';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/projects" element={<ProjectList />} />
-        </Routes>
-      </div>
+      <Routes>
+      <Route path="/" element={<HomePage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/skills" element={<SkillsPage />} />
+      </Routes>
     </Router>
   );
 }

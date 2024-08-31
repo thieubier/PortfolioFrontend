@@ -1,0 +1,50 @@
+/* global.css */
+
+/* Importation de la police DM Sans */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/* Définition des variables CSS pour les couleurs */
+:root {
+    --primary-color: #44453E; /* Kelp */
+    --secondary-color: #D2D2CB; /* Celeste */
+    --tertiary-color: #98A992; /* Envy */
+    --accent-color: #FFE66D; /* Jaune Pale */
+    --background-color: #2E3B3A; /* Couleur de fond sombre */
+    --text-secondary-color: #999CA4; /* Manatee */
+}
+
+/* Styles globaux */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+p {
+    margin: 0;
+    color: var(--text-secondary-color);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Supprimer les marges par défaut des sections principales */
+main {
+    margin: 0;
+    padding: 0;
+}
