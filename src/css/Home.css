@@ -1,29 +1,64 @@
 /* Home.css */
 
-/* Importation du CSS global */
-@import url('../css/global.css');
-
-/* Styles pour la page d'accueil */
+/* Conteneur Principal */
 .home-container {
     padding: 20px;
-    background-color: var(--background-color); /* Utilisation de la même couleur de fond */
-    color: var(--secondary-color); /* Utilisation de la même couleur de texte */
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-    text-align: center; /* Centrage du texte */
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
 }
 
+/* Titre de la Page */
 .home-title {
-    font-size: 2rem; /* Taille du texte similaire à celle des titres des projets */
-    color: var(--secondary-color); /* Couleur du texte */
-    font-weight: 700; /* Gras */
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
+/* Description de la Page */
 .home-description {
-    font-size: 1.2rem; /* Taille du texte légèrement plus grande que les descriptions de projet */
-    color: var(--text-secondary-color); /* Couleur du texte secondaire */
-    max-width: 800px;
-    margin: 0 auto; /* Centrer horizontalement */
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--text-secondary-color);
+}
+
+/* Section pour les images */
+.image-section {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.image-box {
+    width: 30%;
+    height: 200px;
+    background-color: var(--secondary-color); /* Couleur de fond pour les encadrés d'images */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-box img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+/* Section pour le texte */
+.text-section {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.text-box {
+    width: 100%;
+    padding: 20px;
+    background-color: var(--secondary-color); /* Couleur de fond pour les encadrés de texte */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: var(--primary-color); /* Couleur du texte */
+    font-size: 1.2rem;
 }

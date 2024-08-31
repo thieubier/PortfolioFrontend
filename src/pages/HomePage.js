@@ -4,12 +4,10 @@ import Home from '../components/Home'; // Assurez-vous que le chemin est correct
 
 function HomePage() {
   return (
-    <>
+    <div className="homepage">
       <Header />
-      <main>
-        <Home />
-      </main>
-    </>
+      <Home />
+    </div>
   );
 }
 
