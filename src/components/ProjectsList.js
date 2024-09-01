@@ -30,8 +30,24 @@ const ProjectsList = () => {
         fetchProjects();
     }, []); 
 
-    if (loading) return <p>loading...</p>;
-    if (error) return <p>error: {error}</p>;
+    if (loading) {
+        return (
+            <div className="loader-container">
+                <div className="loader"></div>
+            </div>
+        );
+    }
+
+    if (error) {
+        return (
+            <div className="error-container">
+                <div className="error-message">
+                    <p>something went wrong..</p>
+                    <p>error: {error}</p>
+                </div>
+            </div>
+        );
+    }
 
     return (
         <div className="projects-container">
